@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1." />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styels.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script  type="text/javascript"src="https://code.jquery.com/jquery-1.12.4.js"></script> 
+    <script  type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"> </script>
+
+  </head>
+  <body>
+    <section class="container-one">
+      <h1>SCRABBLE</h1>
+
+      <section class="player">
+        <div class="flex-one">
+          <h3 class="item" id="p1-name">Deandra</h3>
+          <p class="item" id="p1-score">1231</p>
+        </div>
+        <div class="flex-one">
+          <p class="item" id="p1-previousword">Cat</p>
+          <p class="item" id="p1-previousScore">10</p>
+        </div>
+        <section class="play-timer">00:00</section>
+      </section>
+      <section class="player">
+        <div class="flex-one">
+          <h3 class="item" id="p2-name">Jamal</h3>
+          <p class="item" id="p2-score">14</p>
+        </div>
+        <div class="flex-one">
+          <p class="item" id="p2-previousword">asda</p>
+          <p class="item" id="p2-previousScore">10</p>
+        </div>
+        <section class="play-timer">00:00</section>
+      </section>
+
+      <section class="options">
+        <button type="button" id="but-dictionary">Dictionary</button>
+        <button type="button" id="but-twoletterwords">Two Letter Words</button>
+        <button type="button" id="but-exchange">Exchange</button>
+      </section>
+      <section id="tileSection">
+        Tiles left: <span id="tiles-left">75</span>
+      </section>
+    </section>
+    <section class="container-two">
+      <section class="content">
+        <section class="gameBoard-grid">
+          <div id="c0-1" class="tile-B TW">TW</div>
+          <div id="c0-2" class="tile-B"></div>
+          <div id="c0-3" class="tile-B"></div>
+          <div id="c0-4" class="tile-B DL">DL</div>
+          <div id="c0-5" class="tile-B"></div>
+          <div id="c0-6" class="tile-B"></div>
+          <div id="c0-7" class="tile-B"></div>
+          <div id="c0-8" class="tile-B TW">TW</div>
+          <div id="c0-9" class="tile-B"></div>
+          <div id="c0-10" class="tile-B"></div>
+          <div id="c0-11" class="tile-B"></div>
+          <div id="c0-12" class="tile-B DL">DL</div>
+          <div id="c0-13" class="tile-B"></div>
+          <div id="c0-14" class="tile-B"></div>
+          <div id="c0-15" class="tile-B TW">TW</div>
+          <div id="c1-1" class="tile-B"></div>
+          <div id="c1-2" class="tile-B DW">DW</div>
+          <div id="c1-3" class="tile-B"></div>
+          <div id="c1-4" class="tile-B"></div>
+          <div id="c1-5" class="tile-B"></div>
+          <div id="c1-6" class="tile-B TL">TL</div>
+          <div id="c1-7" class="tile-B"></div>
+          <div id="c1-8" class="tile-B"></div>
+          <div id="c1-9" class="tile-B"></div>
+          <div id="c1-10" class="tile-B TL">TL</div>
+          <div id="c1-11" class="tile-B"></div>
+          <div id="c1-12" class="tile-B"></div>
+          <div id="c1-13" class="tile-B"></div>
+          <div id="c1-14" class="tile-B DW">DW</div>
+          <div id="c1-15" class="tile-B"></div>
+          <div id="c2-1" class="tile-B"></div>
+          <div id="c2-2" class="tile-B"></div>
+          <div id="c2-3" class="tile-B DW">DW</div>
+          <div id="c2-4" class="tile-B"></div>
+          <div id="c2-5" class="tile-B"></div>
+          <div id="c2-6" class="tile-B"></div>
+          <div id="c2-7" class="tile-B DL">DL</div>
+          <div id="c2-8" class="tile-B"></div>
+          <div id="c2-9" class="tile-B DL">DL</div>
+          <div id="c2-10" class="tile-B"></div>
+          <div id="c2-11" class="tile-B"></div>
+          <div id="c2-12" class="tile-B"></div>
+          <div id="c2-13" class="tile-B DW">DW</div>
+          <div id="c2-14" class="tile-B"></div>
+          <div id="c2-15" class="tile-B"></div>
+          <div id="c3-1" class="tile-B DL">DL</div>
+          <div id="c3-2" class="tile-B"></div>
+          <div id="c3-3" class="tile-B"></div>
+          <div id="c3-4" class="tile-B DW">DW</div>
+          <div id="c3-5" class="tile-B"></div>
+          <div id="c3-6" class="tile-B"></div>
+          <div id="c3-7" class="tile-B"></div>
+          <div id="c3-8" class="tile-B"></div>
+          <div id="c3-9" class="tile-B"></div>
+          <div id="c3-10" class="tile-B"></div>
+          <div id="c3-11" class="tile-B"></div>
+          <div id="c3-12" class="tile-B DW">DW</div>
+          <div id="c3-13" class="tile-B"></div>
+          <div id="c3-14" class="tile-B"></div>
+          <div id="c3-15" class="tile-B DL">DL</div>
+          <div id="c4-1" class="tile-B"></div>
+          <div id="c4-2" class="tile-B"></div>
+          <div id="c4-3" class="tile-B"></div>
+          <div id="c4-4" class="tile-B"></div>
+          <div id="c4-5" class="tile-B DW">DW</div>
+          <div id="c4-6" class="tile-B"></div>
+          <div id="c4-7" class="tile-B"></div>
+          <div id="c4-8" class="tile-B"></div>
+          <div id="c4-9" class="tile-B"></div>
+          <div id="c4-10" class="tile-B"></div>
+          <div id="c4-11" class="tile-B DW">DW</div>
+          <div id="c4-12" class="tile-B"></div>
+          <div id="c4-13" class="tile-B"></div>
+          <div id="c4-14" class="tile-B"></div>
+          <div id="c4-15" class="tile-B"></div>
+          <div id="c5-1" class="tile-B"></div>
+          <div id="c5-2" class="tile-B TL">TL</div>
+          <div id="c5-3" class="tile-B"></div>
+          <div id="c5-4" class="tile-B"></div>
+          <div id="c5-5" class="tile-B"></div>
+          <div id="c5-6" class="tile-B TL">TL</div>
+          <div id="c5-7" class="tile-B"></div>
+          <div id="c5-8" class="tile-B"></div>
+          <div id="c5-9" class="tile-B"></div>
+          <div id="c5-10" class="tile-B TL">TL</div>
+          <div id="c5-11" class="tile-B"></div>
+          <div id="c5-12" class="tile-B"></div>
+          <div id="c5-13" class="tile-B"></div>
+          <div id="c5-14" class="tile-B TL">TL</div>
+          <div id="c5-15" class="tile-B"></div>
+          <div id="c6-1" class="tile-B"></div>
+          <div id="c6-2" class="tile-B"></div>
+          <div id="c6-3" class="tile-B DL">DL</div>
+          <div id="c6-4" class="tile-B"></div>
+          <div id="c6-5" class="tile-B"></div>
+          <div id="c6-6" class="tile-B"></div>
+          <div id="c6-7" class="tile-B DL">DL</div>
+          <div id="c6-8" class="tile-B"></div>
+          <div id="c6-9" class="tile-B DL">DL</div>
+          <div id="c6-10" class="tile-B"></div>
+          <div id="c6-11" class="tile-B"></div>
+          <div id="c6-12" class="tile-B"></div>
+          <div id="c6-13" class="tile-B DL">DL</div>
+          <div id="c6-14" class="tile-B"></div>
+          <div id="c6-15" class="tile-B"></div>
+          <div id="c7-1" class="tile-B TW">TW</div>
+          <div id="c7-2" class="tile-B"></div>
+          <div id="c7-3" class="tile-B"></div>
+          <div id="c7-4" class="tile-B DL">DL</div>
+          <div id="c7-5" class="tile-B"></div>
+          <div id="c7-6" class="tile-B"></div>
+          <div id="c7-7" class="tile-B"></div>
+          <div id="c7-8 star" class="tile-B">
+            <span
+              class="iconify"
+              data-inline="false"
+              data-icon="eva:star-fill"
+              style="color: #ffd803"
+            ></span>
+          </div>
+          <div id="c7-9" class="tile-B"></div>
+          <div id="c7-10" class="tile-B"></div>
+          <div id="c7-11" class="tile-B"></div>
+          <div id="c7-12" class="tile-B DL">DL</div>
+          <div id="c7-13" class="tile-B"></div>
+          <div id="c7-14" class="tile-B"></div>
+          <div id="c7-15" class="tile-B TW">TW</div>
+          <div id="c8-1" class="tile-B"></div>
+          <div id="c8-2" class="tile-B"></div>
+          <div id="c8-3" class="tile-B DL">DL</div>
+          <div id="c8-4" class="tile-B"></div>
+          <div id="c8-5" class="tile-B"></div>
+          <div id="c8-6" class="tile-B"></div>
+          <div id="c8-7" class="tile-B DL">DL</div>
+          <div id="c8-8" class="tile-B"></div>
+          <div id="c8-9" class="tile-B DL">DL</div>
+          <div id="c8-10" class="tile-B"></div>
+          <div id="c8-11" class="tile-B"></div>
+          <div id="c8-12" class="tile-B"></div>
+          <div id="c8-13" class="tile-B DL">DL</div>
+          <div id="c8-14" class="tile-B"></div>
+          <div id="c8-15" class="tile-B"></div>
+          <div id="c9-1" class="tile-B"></div>
+          <div id="c9-2" class="tile-B TL">TL</div>
+          <div id="c9-3" class="tile-B"></div>
+          <div id="c9-4" class="tile-B"></div>
+          <div id="c9-5" class="tile-B"></div>
+          <div id="c9-6" class="tile-B TL">TL</div>
+          <div id="c9-7" class="tile-B"></div>
+          <div id="c9-8" class="tile-B"></div>
+          <div id="c9-9" class="tile-B"></div>
+          <div id="c9-10" class="tile-B TL">TL</div>
+          <div id="c9-11" class="tile-B"></div>
+          <div id="c9-12" class="tile-B"></div>
+          <div id="c9-13" class="tile-B"></div>
+          <div id="c9-14" class="tile-B TL">TL</div>
+          <div id="c9-15" class="tile-B"></div>
+          <div id="c10-1" class="tile-B"></div>
+          <div id="c10-2" class="tile-B"></div>
+          <div id="c10-3" class="tile-B"></div>
+          <div id="c10-4" class="tile-B"></div>
+          <div id="c10-5" class="tile-B DW">DW</div>
+          <div id="c10-6" class="tile-B"></div>
+          <div id="c10-7" class="tile-B"></div>
+          <div id="c10-8" class="tile-B"></div>
+          <div id="c10-9" class="tile-B"></div>
+          <div id="c10-10" class="tile-B"></div>
+          <div id="c10-11" class="tile-B DW">DW</div>
+          <div id="c10-12" class="tile-B"></div>
+          <div id="c10-13" class="tile-B"></div>
+          <div id="c10-14" class="tile-B"></div>
+          <div id="c10-15" class="tile-B"></div>
+          <div id="c11-1" class="tile-B DL">DL</div>
+          <div id="c11-2" class="tile-B"></div>
+          <div id="c11-3" class="tile-B"></div>
+          <div id="c11-4" class="tile-B DW">DW</div>
+          <div id="c11-5" class="tile-B"></div>
+          <div id="c11-6" class="tile-B"></div>
+          <div id="c11-7" class="tile-B"></div>
+          <div id="c11-8" class="tile-B DL">DL</div>
+          <div id="c11-9" class="tile-B"></div>
+          <div id="c11-10" class="tile-B"></div>
+          <div id="c11-11" class="tile-B"></div>
+          <div id="c11-12" class="tile-B DW">DW</div>
+          <div id="c11-13" class="tile-B"></div>
+          <div id="c11-14" class="tile-B"></div>
+          <div id="c11-15" class="tile-B DL">DL</div>
+          <div id="c12-1" class="tile-B"></div>
+          <div id="c12-2" class="tile-B"></div>
+          <div id="c12-3" class="tile-B DW">DW</div>
+          <div id="c12-4" class="tile-B"></div>
+          <div id="c12-5" class="tile-B"></div>
+          <div id="c12-6" class="tile-B"></div>
+          <div id="c12-7" class="tile-B DL">DL</div>
+          <div id="c12-8" class="tile-B"></div>
+          <div id="c12-9" class="tile-B DL">DL</div>
+          <div id="c12-10" class="tile-B"></div>
+          <div id="c12-11" class="tile-B"></div>
+          <div id="c12-12" class="tile-B"></div>
+          <div id="c12-13" class="tile-B DW">DW</div>
+          <div id="c12-14" class="tile-B"></div>
+          <div id="c12-15" class="tile-B"></div>
+          <div id="c13-1" class="tile-B"></div>
+          <div id="c13-2" class="tile-B DW">DW</div>
+          <div id="c13-3" class="tile-B"></div>
+          <div id="c13-4" class="tile-B"></div>
+          <div id="c13-5" class="tile-B"></div>
+          <div id="c13-6" class="tile-B TL">TL</div>
+          <div id="c13-7" class="tile-B"></div>
+          <div id="c13-8" class="tile-B"></div>
+          <div id="c13-9" class="tile-B"></div>
+          <div id="c13-10" class="tile-B TL">TL</div>
+          <div id="c13-11" class="tile-B"></div>
+          <div id="c13-12" class="tile-B"></div>
+          <div id="c13-13" class="tile-B"></div>
+          <div id="c13-14" class="tile-B DW">DW</div>
+          <div id="c13-15" class="tile-B"></div>
+          <div id="c14-1" class="tile-B TW">TW</div>
+          <div id="c14-2" class="tile-B"></div>
+          <div id="c14-3" class="tile-B"></div>
+          <div id="c14-4" class="tile-B DL">DL</div>
+          <div id="c14-5" class="tile-B"></div>
+          <div id="c14-6" class="tile-B"></div>
+          <div id="c14-7" class="tile-B"></div>
+          <div id="c14-8" class="tile-B TW">TW</div>
+          <div id="c14-9" class="tile-B"></div>
+          <div id="c14-10" class="tile-B"></div>
+          <div id="c14-11" class="tile-B"></div>
+          <div id="c14-12" class="tile-B DL">DL</div>
+          <div id="c14-13" class="tile-B"></div>
+          <div id="c14-14" class="tile-B"></div>
+          <div id="c14-15" class="tile-B TW">TW</div>
+        </section>
+        <section id="player-tiles">
+          <div id="L-1" class="tile-L">A</div>
+          <div id="L-2" class="tile-L">B</div>
+          <div id="L-3" class="tile-L">C</div>
+          <div id="L-4" class="tile-L">D</div>
+          <div id="L-5" class="tile-L">E</div>
+          <div id="L-6" class="tile-L">F</div>
+          <div id="L-7" class="tile-L">G</div>
+        </section>
+        <section class="flex-two">
+          <button type="button" class="item" id="but-skip">Skip</button>
+          <button type="button" class="item" id="but-shuffle">Shuffle</button>
+          <button type="button" class="item" id="but-recall">Recall</button>
+          <button type="button" class="item" id="but-play">Play</button>
+          <button type="button" class="item" id="but-standup">Standup</button>
+        </section>
+      </section>
+    </section>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <script type="text/javascript" src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  </body>
+</html>

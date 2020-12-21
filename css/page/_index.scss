@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    top: 0;
+    font-size: 16px;
+    font-family: $varelaRound;
+    overflow: hidden;
+}
+
+button {
+    display: block;
+    font-family: $varelaRound;
+
+    padding: 10px;
+    border: solid 2px $stroke;
+    margin: 10px auto;
+    color:$button-text;
+    font-weight: bold;
+    font-size:0.9em;
+    
+    background: linear-gradient(to right, $animation 50%, $button 50%);
+    background-size: 200% 100%;
+    background-position: bottom right;
+    transition: all .7s ease-out;
+
+}
+
+button:hover{
+    background-position: bottom left;
+    color:$background-one;
+
+}
+
+.play-timer{
+    font-size: 0.9em;
+
+}
+.play-timer, #tileSection{
+    color:$card-text-background;
+    background-color:$card-background;
+}
+
+.container-one {
+    width: 245px;
+    padding: 30px;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+
+    background-color: $background-one;
+    border-right: 2px solid $stroke;
+
+    #tiles-left,#p1-previousScore,#p2-previousScore,#p1-score,#p2-score,.play-timer{
+        font-size:1.2em;
+    }
+    h1{
+        font-size:1.8em;
+        font-family: $varelaRound;
+        letter-spacing: 10px;
+        margin:10px;
+        text-align:center;
+    }
+    h3 {
+        font-size: 20px;
+    }
+
+    .player {
+        padding: 10px;
+        margin: 40px auto;
+        background-color:$card-background;
+
+        .flex-one {
+            display: flex;
+            background-color:$card-text-background;
+            margin: 10px auto;
+
+            .item {
+                margin: 10px;
+                width: 50%;
+
+                text-align: center;
+                word-wrap: break-word;
+                vertical-align: center;
+
+            }
+        }
+    }
+
+    .options{
+        margin:50px auto;
+        button{
+            width:80%;
+        }
+    }
+    #tileSection {
+        margin: 10px auto;
+        padding: 20px;
+        width:80%;
+        font-size: 1.2em;
+
+
+    }
+
+}
+
+.container-two {
+    margin-left: 300px;
+    padding: 50px;
+    height: 100vh;
+    background-color: $background-two;
+    .content{
+       margin: 30px auto;
+
+        padding:0;
+        
+        
+    }
+    .gameBoard-grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        border: solid 4px $stroke;
+        width:630px;
+        margin:auto;
+
+        .tile-B {
+            display: block;
+            background-color:$board-tiles;
+            padding: 10px;
+            width: $tile-hw;
+            height: $tile-hw;
+            border: solid 1px $stroke;
+
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        #star {
+            background-color:  $board-doubleWord;
+        }
+        .iconify{
+            margin:0;
+            padding:0;
+            font-size:20px;
+        }
+
+        .TW,.TL,.DW,.DL{
+            font-family: $Pacifico;
+            font-size: 0.7em;
+        }
+        .TW {
+            background-color:$board-tripleWord;
+        }
+
+        .TL {
+            background-color:$board-tripleLetter;
+        }
+
+        .DW {
+            background-color: $board-doubleWord;
+        }
+
+        .DL {
+            background-color: $board-doubleLetter;
+        }
+    }
+
+    #player-tiles {
+        display: flex;
+        flex-direction: row;
+        background-color: $background-one;
+        width: 350px;
+        margin: 20px auto;
+        padding: 15px;
+        border: solid 1px;
+
+
+        .tile-L {
+
+            width: 20px;
+            height: 20px;
+            padding: $tile-p;
+            margin: auto 2px;
+
+            border: solid 1px $stroke;
+            background-color: $player-tiles;
+
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+
+            transition: box-shadow 0.7s;
+
+        }
+        .tile-L:hover{
+            box-shadow: 0px 2px 5px $animation;
+            transition: box-shadow 0.5s;
+        }
+
+
+    }
+
+    .flex-two {
+        display:flex;
+        text-align: center;       
+        flex-direction: row;
+        margin:10px auto;
+        align-items: center;
+        justify-content: center;
+
+        .item{
+            width:140px;
+            margin:10px;
+        }
+        button {
+            display: inline;
+        }
+    }
+
+
+}
