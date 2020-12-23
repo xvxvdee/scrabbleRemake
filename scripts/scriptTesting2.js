@@ -180,3 +180,4 @@ start from leftmost letter placed
 // let test= prompt("ENTER TEXT: ");
 // console.log(test)
 printBoard(board);
+console.log("hello");
