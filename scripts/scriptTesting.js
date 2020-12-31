@@ -40,16 +40,16 @@ board[9][8] = 'e';
 printBoard(board);
 console.log("\n")
 
-function valid(word) {
-	console.log(word)
-  temp=word.join("")
-  for (let a = 0; a < words.length; a++) {
-    if (words[a] == temp) {
-      return true;
-    }
-  }
-  return false;
-}
+// function valid(word) {
+// 	console.log(word)
+//   temp=word.join("")
+//   for (let a = 0; a < words.length; a++) {
+//     if (words[a] == temp) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
 function checkVertical(row, col) {
   let up = row - 1;
@@ -70,13 +70,17 @@ function checkVertical(row, col) {
     }
     word.push(board[j][col])
   }
-
-  console.log(valid(word))
+  if (words.includes(word) || word.length ==1){
+    return true;
+  }else{
+    return false
+  }
 }
 
 checkVertical(5, 4)
 checkVertical(5, 6)
 checkVertical(5, 8)
+checkVertical(5, 7)
 
 // case 1 vertically (its own letters horizontally)
 
